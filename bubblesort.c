@@ -14,7 +14,9 @@ int array[arraysize];
 
 int main() {
 
-    
+    int printArray();
+    int bubbleSort();
+
     srand(time(NULL));
 
    
@@ -51,16 +53,16 @@ int printArray(){
 int bubbleSort(){
 
 
-    for (int k = arraysize; k > 0; k--){
 
-    
-        for(int i = 0; i < k; i++){
+    for(int i = 0; i < arraysize; i++){
 
-            if (array[i] > array[i+1])
+        for(int j = 0; j < arraysize-i-1; j++){
+
+            if (array[j] > array[j+1])
             {
-                int temp = array[i];
-                array[i] = array[i+1];
-                array[i+1] = temp;
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
             }
 
         }
